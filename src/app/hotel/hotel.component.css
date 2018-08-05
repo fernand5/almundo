@@ -1,0 +1,50 @@
+.border-dotted{
+  border-left: 2px dotted #939393;
+}
+.fa-star{
+  color: yellow;
+}
+.custom-height{
+  height: 20%;
+  margin-top: 2%;
+}
+.star_svg{
+  fill: yellow;
+}
+.stars {
+  width: 100%;
+}
+.background-grey{
+  background-color: #f4f4f4;
+  z-index: 0;
+}
+.container-custom{
+  padding-top: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+.margin-custom-cards{
+  padding:  0.5%;;
+}
+.margin-custom-cards img{
+  padding: 0;
+}
+.search-icon{
+  width: 5%;
+}
+.display-block{
+  display: block;
+}
+.star-icon-filter{
+  width: 10%;
+}
+.price-color{
+  color: #df6800;
+}
+.filters-cards{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#inputSearch{
+  margin-right: 5%;
+}

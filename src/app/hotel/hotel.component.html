@@ -1,0 +1,75 @@
+<div class="background-grey">
+  <div class="row container-custom">
+    <div class="col-lg-3">
+      <div class="card">
+        <div class="card-body filters-cards"><h4><strong>Filtros</strong></h4></div>
+      </div>
+      <div class="card d-sm-none d-none d-md-none d-lg-block">
+        <div class="card-body filters-cards">
+          <div class="row display-block">
+            <img class="search-icon" src="assets/icons/filters/search.svg" alt=""><strong class="d-inline-block mb-2 text-primary">Nombre del hotel</strong>
+          </div>
+          <div class="row">
+            <input type="text" class="form-control col-md-7" id="inputSearch" [(ngModel)]="inputSearch" placeholder="Ingrese el nombre del hotel">
+            <button class="col-md-3 btn btn-primary" (click)="getHotel()" >Aceptar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card d-sm-none d-none d-md-none d-lg-block">
+        <div class="card-body filters-cards">
+          <div class="row display-block">
+            <img class="search-icon" src="assets/icons/filters/star.svg" alt=""><strong class="d-inline-block mb-2 text-primary">Estrellas</strong>
+          </div>
+          <div class="row display-block">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" checked="checked">
+                <strong>Todas las estrellas</strong>
+              </label>
+            </div>
+          </div>
+          <div class="row display-block" *ngFor="let number of [5,4,3,2,1]">
+            <div class="form-check">
+              <label class="form-check-label" >
+                <input class="form-check-input" type="checkbox" value="{{number}}" (change)="starsSelected(number)">
+                <img class="star-icon-filter" *ngFor="let i of arrayBuild(number)" src="assets/icons/filters/star.svg" alt="">
+
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-9">
+      <div class="card flex-md-row mb-4 box-shadow h-md-250 margin-custom-cards" *ngFor="let hotel of hotels">
+        <img class="card-img-right flex-auto d-md-block col-12 col-sm-4 col-md-4 col-lg-3" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" default="assets/images/hotels/default.jpg" src="assets/images/hotels/{{hotel.image}}" data-holder-rendered="true">
+
+        <div class="card-body d-flex flex-column align-items-start">
+          <strong class="d-inline-block mb-2 text-primary">{{hotel.name}}</strong>
+          <div class="row">
+            <div  class="custom-height col-4 col-sm-4 col-md-4 col-lg-4" *ngFor="let number of [0,1,2,3,4,5]">
+              <img *ngIf="hotel.stars>number" src="assets/icons/filters/star.svg">
+            </div>
+          </div>
+
+          <div class="row">
+            <img *ngFor="let amenity of hotel.amenities" class="custom-height col-2 col-sm-2 col-md-2 col-lg-1" src="assets/icons/amenities/{{amenity}}.svg" alt="">
+          </div>
+
+        </div>
+        <div class="card-body d-flex flex-column border-dotted col-md-3">
+          <h6 class="text-center">Precio por noche por habitación</h6>
+          <h4 class="mb-0 text-center">
+            <a class="price-color" href="#">ARS</a><strong class="price-color">{{hotel.price}}</strong>
+          </h4>
+          <button class="btn btn-primary text-center" >Ver Hotel</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
