@@ -8,7 +8,7 @@ import {HotelService} from '../_services/hotel.service';
 })
 export class HotelComponent implements OnInit {
 
-  hotels: any = {};
+  hotels: any = [];
   inputSearch = '';
   arrayStars = Array();
   displayStarsFilter = true;
@@ -20,7 +20,6 @@ export class HotelComponent implements OnInit {
     this.hotelService.getAll().subscribe(
       data => {
         this.hotels = data;
-        console.log(data);
       },
       error => {
         console.log(error);
@@ -55,7 +54,7 @@ export class HotelComponent implements OnInit {
     );
   }
 
-  showFiltersActions(){
+  showFiltersActions() {
     this.showFilters = !this.showFilters;
   }
   displayStars() {

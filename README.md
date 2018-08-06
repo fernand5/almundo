@@ -32,6 +32,7 @@ Ejecutar `mongoimport --db almundoHotels --collection hotels --file api/data/dat
 ## LLamadas API REST
 
 * GET ALL: GET /hotels
+* GET hotel: GET /hotels/:idMongoHotel
 * CREATE: POST /hotels
 * UPDATE: PUT /hotels/:idMongoHotel
 * DElETE: DELETE /hotels/:idMongoHotel

@@ -20,7 +20,7 @@ exports.create_a_hotel = function(req, res) {
 
 
 exports.read_a_hotel = function(req, res) {
-    Hotel.find( {id: req.params.hotelId}, function(err, task) {
+    Hotel.find( {_id: req.params.hotelId}, function(err, task) {
         if (err)
             res.send(err);
         res.json(task);
