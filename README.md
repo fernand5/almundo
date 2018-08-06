@@ -46,3 +46,11 @@ Ejecutar `mongoimport --db almundoHotels --collection hotels --file api/data/dat
 * Express v4.16.3
 * Mongose v5.2.6
 * MongoDB V3.6.5
+
+## Pantallas
+
+* Desktop
+https://github.com/fernand5/almundo/master/src/assets/salidas/desktop.png
+
+* Mobile
+https://github.com/fernand5/almundo/master/src/assets/salidas/mobile.png
