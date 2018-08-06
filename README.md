@@ -50,7 +50,9 @@ Ejecutar `mongoimport --db almundoHotels --collection hotels --file api/data/dat
 ## Pantallas
 
 * Desktop
-https://github.com/fernand5/almundo/master/src/assets/salidas/desktop.png
+
+![Image of desktop](https://github.com/fernand5/almundo/blob/master/src/assets/salidas/desktop.PNG)
 
 * Mobile
-https://github.com/fernand5/almundo/master/src/assets/salidas/mobile.png
+
+![Image of desktop](https://github.com/fernand5/almundo/blob/master/src/assets/salidas/mobile.PNG)
