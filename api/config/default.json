@@ -1,0 +1,9 @@
+{
+  "server": {
+    "port": 3000
+  },
+  "serverMongo":{
+    "port": 27017,
+    "db": "almundoHotels"
+  }
+}

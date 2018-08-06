@@ -1,13 +1,16 @@
 var express = require('express'),
     app = express(),
-    port = process.env.PORT || 3000,
+    // port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
     Task = require('./models/hotelModel'), //created model loading here
     bodyParser = require('body-parser');
 
+const config = require('./config');
+var port = config.server.port;
+
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/almundoHotels');
+mongoose.connect('mongodb://localhost:'+config.serverMongo.port+'/'+config.serverMongo.db);
 
 app.use(function (req, res, next) {
 
