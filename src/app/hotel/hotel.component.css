@@ -51,7 +51,8 @@
   width: 70px;
 }
 .img-custom-size-stars{
-  width: 40px;
+  width: 30px;
+  padding-right: 10px;
 }
 .custom-padding{
   padding: 0;
@@ -87,4 +88,7 @@
     margin-top: 2%;
     width: 50%;
   }
+}
+.filters-style-color{
+  color: #212121;
 }

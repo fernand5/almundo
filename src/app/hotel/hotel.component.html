@@ -1,10 +1,16 @@
 <div class="background-grey">
   <div class="row container-custom">
     <div class="col-lg-3">
-      <div class="card text-center text-sm-center text-md-left text-lg-left text-xl-left">
-        <div class="card-body filters-cards"><h4><strong><a href="#" (click)="showFiltersActions()">Filtros <i [hidden]="!displayHotelSearch" class="fa fa-caret-down d-md-none d-lg-none d-xl-none"></i></a></strong>
+      <div class="card text-center text-sm-center text-md-left text-lg-left text-xl-left d-md-none d-lg-none d-xl-none">
+        <div class="card-body filters-cards"><h4><strong><a href="#" (click)="showFiltersActions()">Filtrar <i [hidden]="!displayHotelSearch" class="fa fa-caret-down "></i></a></strong>
         </h4></div>
       </div>
+      <a href="#" class="filters-style-color" (click)="showFiltersActions()">
+        <div class="card text-center text-sm-center text-md-left text-lg-left text-xl-left d-none d-sm-none d-md-block d-lg-block d-xl-block">
+          <div class="card-body filters-cards"><h4><strong>Filtros</strong>
+          </h4></div>
+        </div>
+      </a>
       <div *ngIf="showFilters">
         <!--<div class="card d-sm-none d-none d-md-none d-lg-block">-->
         <div class="card">
@@ -75,7 +81,7 @@
           <div class="row icons-padding">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
               <div class="row">
-                <div class="col-1 col-sm-1 col-md-1 col-lg-1 custom-padding" *ngFor="let number of [0,1,2,3,4,5]">
+                <div class="col-1 col-sm-1 col-md-2 col-lg-2 col-xl-1 custom-padding" *ngFor="let number of [0,1,2,3,4,5]">
                   <img *ngIf="hotel.stars>number" src="assets/icons/filters/star.svg" class="img-custom-size-stars">
                 </div>
               </div>

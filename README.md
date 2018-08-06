@@ -38,3 +38,11 @@ Ejecutar `mongoimport --db almundoHotels --collection hotels --file api/data/dat
 * DElETE: DELETE /hotels/:idMongoHotel
 * SEARCH: GET /hotels/search/:hotelName/stars/:stars
 
+## Probado con las siguientes tecnologias
+
+* NPM v3.10.10
+* NODE v6.11.2
+* Angular CLI 1.7.4
+* Express v4.16.3
+* Mongose v5.2.6
+* MongoDB V3.6.5
