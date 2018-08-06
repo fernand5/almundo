@@ -29,3 +29,11 @@ Ejecutar `mongoimport --db almundoHotels --collection hotels --file api/data/dat
 
 * Ejecutar `ng build -prod` agrega los archivos minificados a la carpeta `/dist`
 
+## LLamadas API REST
+
+* GET ALL: GET /hotels
+* CREATE: POST /hotels
+* UPDATE: PUT /hotels/:idMongoHotel
+* DElETE: DELETE /hotels/:idMongoHotel
+* SEARCH: GET /hotels/search/:hotelName/stars/:stars
+

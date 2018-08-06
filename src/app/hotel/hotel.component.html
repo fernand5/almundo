@@ -1,8 +1,8 @@
 <div class="background-grey">
   <div class="row container-custom">
     <div class="col-lg-3">
-      <div class="card">
-        <div class="card-body filters-cards"><h4><strong><a href="#" (click)="showFiltersActions()">Filtros</a></strong>
+      <div class="card text-center text-sm-center text-md-left text-lg-left text-xl-left">
+        <div class="card-body filters-cards"><h4><strong><a href="#" (click)="showFiltersActions()">Filtros <i [hidden]="!displayHotelSearch" class="fa fa-caret-down d-md-none d-lg-none d-xl-none"></i></a></strong>
         </h4></div>
       </div>
       <div *ngIf="showFilters">

@@ -26,6 +26,10 @@ export class HotelComponent implements OnInit {
         console.log(error);
       }
     );
+
+    if (window.screen.width < 992) { // 768px portrait
+      this.showFilters = false;
+    }
   }
 
   getHotel() {
