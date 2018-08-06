@@ -1,27 +1,31 @@
 # Almundo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+* Prueba de almundo para listar Hoteles usando filtros de busqueda por nombre o por estrellas
 
-## Development server
+* Este proyecto a nivel de Front-end fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+* A nivel de Back-End se utilizaron: Node.js, Mongoose, Express
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Requisitos
 
-## Code scaffolding
+* Se debe tener instalado MongoDB para almacenar los datos de los hoteles y agregar una capa de persistencia de datos a la aplicación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Importar datos en MongoDB
 
-## Build
+Ejecutar `mongoimport --db almundoHotels --collection hotels --file api/data/data.json --jsonArray` para generar una base de datos almundoHotels con una coleccion de hotels
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Desplegar Back-End
 
-## Running unit tests
+* Ir a la carpeta de la API: `cd api`
+* Ejecutar `npm install` para instalar las dependencias de node.js
+* Ejecutar `npm run start` para arrancar el Back-end (Puerto 3000 debe estar libre)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Desplegar Front-End
 
-## Running end-to-end tests
+* Desde la carpeta root del proyecto:
+* Ejecutar `npm install` para instalar las dependencias del Front-End
+* Ejecutar `ng serve open` para arrancar el Front-End(Puerto 4200 debe estar libre)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Para minificar y ofuscar los archivos del proyecto
 
-## Further help
+* Ejecutar `ng build -prod` agrega los archivos minificados a la carpeta `/dist`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

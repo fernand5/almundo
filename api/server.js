@@ -7,7 +7,7 @@ var express = require('express'),
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/almundo');
+mongoose.connect('mongodb://localhost:27017/almundoHotels');
 
 app.use(function (req, res, next) {
 
