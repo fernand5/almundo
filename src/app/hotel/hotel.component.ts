@@ -11,6 +11,9 @@ export class HotelComponent implements OnInit {
   hotels: any = {};
   inputSearch = '';
   arrayStars = Array();
+  displayStarsFilter = true;
+  displayHotelSearch = true;
+  showFilters = true;
   constructor(private hotelService: HotelService) { }
 
   ngOnInit() {
@@ -26,7 +29,19 @@ export class HotelComponent implements OnInit {
   }
 
   getHotel() {
-    this.hotelService.getHotel(this.inputSearch, this.arrayStars.join(' ')).subscribe(
+    let starsToSend = '';
+    let hotelName = '';
+    if (this.arrayStars.length == 0) {
+      starsToSend = 'all';
+    } else {
+      starsToSend = this.arrayStars.join(' ');
+    }
+    if (this.inputSearch == '') {
+      hotelName = 'all';
+    } else {
+      hotelName = this.inputSearch;
+    }
+    this.hotelService.getHotel(hotelName, starsToSend).subscribe(
       data => {
         this.hotels = data;
       },
@@ -34,6 +49,16 @@ export class HotelComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  showFiltersActions(){
+    this.showFilters = !this.showFilters;
+  }
+  displayStars() {
+    this.displayStarsFilter = !this.displayStarsFilter;
+  }
+  displayHotelInput() {
+    this.displayHotelSearch = !this.displayHotelSearch;
   }
 
   arrayBuild(n: number): any[] {

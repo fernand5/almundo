@@ -1,12 +1,8 @@
-.border-dotted{
-  border-left: 2px dotted #939393;
-}
 .fa-star{
   color: yellow;
 }
-.custom-height{
-  height: 20%;
-  margin-top: 2%;
+.custom-margin{
+  height: 40px;
 }
 .star_svg{
   fill: yellow;
@@ -24,19 +20,22 @@
   margin-left: 1%;
 }
 .margin-custom-cards{
-  padding:  0.5%;;
+  padding: 0.5%;
 }
 .margin-custom-cards img{
-  padding: 0;
+  padding: 8px;
 }
 .search-icon{
   width: 5%;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 .display-block{
   display: block;
 }
 .star-icon-filter{
-  width: 10%;
+  margin-top: -5px;
+  width: 15px;
 }
 .price-color{
   color: #df6800;
@@ -47,4 +46,45 @@
 }
 #inputSearch{
   margin-right: 5%;
+}
+.img-custom-size-amenities{
+  width: 70px;
+}
+.img-custom-size-stars{
+  width: 40px;
+}
+.custom-padding{
+  padding: 0;
+}
+.btn-custom-style{
+  font-weight: 700;
+  background-color: #002c77;
+}
+.button-hotel button{
+  margin-top: 2%;
+  width: 50%;
+}
+.custom-weight-font{
+  font-weight: 300;
+}
+.icons-padding{
+  padding-left: 5px;
+}
+@media (min-width: 768px){
+  .border-dotted{
+    border-left: 2px dotted #d4d4d4;
+  }
+  .button-search{
+    margin-top: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 767px){
+  .border-dotted{
+    border-top: 2px dotted #d4d4d4;
+  }
+  .button-search{
+    margin-top: 2%;
+    width: 50%;
+  }
 }
