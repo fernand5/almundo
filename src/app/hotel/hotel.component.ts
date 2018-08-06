@@ -14,6 +14,7 @@ export class HotelComponent implements OnInit {
   displayStarsFilter = true;
   displayHotelSearch = true;
   showFilters = true;
+  selectedAll = true;
   constructor(private hotelService: HotelService) { }
 
   ngOnInit() {
@@ -69,12 +70,22 @@ export class HotelComponent implements OnInit {
   }
 
   starsSelected(number) {
+    this.selectedAll = false;
     if (this.arrayStars.includes(number)) {
       const index = this.arrayStars.indexOf(number);
       this.arrayStars.splice(index, 1);
     } else {
       this.arrayStars.push(number);
     }
+    this.getHotel();
     console.log(this.arrayStars);
+  }
+
+  changeStars(event) {
+    this.selectedAll = true;
+    if (event.target.checked) {
+      this.arrayStars =  Array();
+      this.getHotel();
+    }
   }
 }

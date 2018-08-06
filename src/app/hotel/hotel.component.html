@@ -47,7 +47,7 @@
               <div class="row display-block">
                 <div class="form-check">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="" [checked]="arrayStars.length==0">
+                    <input class="form-check-input" type="checkbox" value="" [checked]="arrayStars.length==0" (click)="changeStars($event)">
                     <strong>Todas las estrellas</strong>
                   </label>
                 </div>
@@ -55,7 +55,7 @@
               <div class="row display-block" *ngFor="let number of [5,4,3,2,1]">
                 <div class="form-check">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="{{number}}" (change)="starsSelected(number)">
+                    <input class="form-check-input" type="checkbox" value="{{number}}" (change)="starsSelected(number)" [checked]="!selectedAll && arrayStars.includes(number)">
                     <img class="star-icon-filter" *ngFor="let i of arrayBuild(number)"
                          src="assets/icons/filters/star.svg" alt="">
 
