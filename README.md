@@ -38,6 +38,16 @@ Ejecutar `mongoimport --db almundoHotels --collection hotels --file api/data/dat
 * DElETE: DELETE /hotels/:idMongoHotel
 * SEARCH: GET /hotels/search/:hotelName/stars/:stars
 
+## Ambientes API
+
+* Default (development)
+* Staging
+* Production
+
+Ejemplo: 
+* Arancar la API con el comando (en windows): `set NODE_ENV=staging&&npm start` para arrancar el archivo de configuracion para el ambiente de stage
+* Arancar la API con el comando (en linux): `NODE_ENV=staging npm start`
+
 ## Probado con las siguientes tecnologias
 
 * NPM v3.10.10
