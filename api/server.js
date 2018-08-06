@@ -42,4 +42,4 @@ app.use(function(req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})
 });
 
-console.log('todo list RESTful API server started on: ' + port);
+console.log('Hotels RESTful API server started on: ' + port);

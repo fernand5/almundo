@@ -4,21 +4,24 @@ var Schema = mongoose.Schema;
 
 
 var TaskSchema = new Schema({
-    name: {
-        type: String,
-        required: 'Kindly enter the name of the task'
-    },
-    Created_date: {
-        type: Date,
-        default: Date.now
-    },
-    status: {
-        type: [{
-            type: String,
-            enum: ['pending', 'ongoing', 'completed']
-        }],
-        default: ['pending']
-    }
+  id: {
+    type: Number
+  },
+  name: {
+    type: String,
+  },
+  stars: {
+    type: Number
+  },
+  price: {
+    type: Number
+  },
+  image: {
+    type: String
+  },
+  amenities: {
+    type: Array
+  }
 });
 
 module.exports = mongoose.model('Hotels', TaskSchema);

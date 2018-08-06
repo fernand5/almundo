@@ -9,15 +9,12 @@ exports.list_all_hotels = function(req, res) {
     });
 };
 
-
-
-
 exports.create_a_hotel = function(req, res) {
-    var new_task = new Hotel(req.body);
-    new_task.save(function(err, task) {
+    var new_hotel = new Hotel(req.body);
+    new_hotel.save(function(err, hotel) {
         if (err)
             res.send(err);
-        res.json(task);
+        res.json(hotel);
     });
 };
 

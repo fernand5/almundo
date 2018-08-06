@@ -7,7 +7,7 @@
 
 ## Requisitos
 
-* Se debe tener instalado MongoDB para almacenar los datos de los hoteles y agregar una capa de persistencia de datos a la aplicación
+* Se debe tener instalado MongoDB para almacenar los datos de los hoteles y agregar una capa de persistencia de datos a la aplicación (Se utiliza el puerto por default de MongoDB 27017)
 
 ## Importar datos en MongoDB
 
